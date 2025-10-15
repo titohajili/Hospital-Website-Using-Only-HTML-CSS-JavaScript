@@ -248,8 +248,6 @@ body.nav-active {
   #HEADER
 \*-----------------------------------*/
 
-.navbar,
-.overlay,
 .header .btn{display: none;}
 
 .header{
@@ -293,7 +291,7 @@ body.nav-active {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 
@@ -312,7 +310,57 @@ body.nav-active {
   transition: 0.5s var(--cubic-out);
 }
 
+.navbar-top{
+  position: relative;
+  padding-inline: 25px;
+  padding-block: 55px 100px;
+}
 
+.nav-close-btn{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 2.8rem;
+}
+
+
+.navbar-list{
+  margin-block-end: 30px;
+  border-block-end: 1px solid var(--white_a10);
+}
+
+.navbar-item{
+  border-block-start: 1px solid var(--white_a10);
+}
+
+.navbar-link{
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 10px 24px;
+}
+
+.social-list{
+  justify-content: center;
+  gap: 20px;
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.overlay{
+  right: -100%;
+  background-color: var(--black);
+  opacity: .3;
+  visibility: hidden;
+  transition: var(--transition-2);
+  z-index: 2;
+}
+
+.overlay.active{
+  right: 0;
+  transform: translateX(-100%);
+  visibility: visible;
+}
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
