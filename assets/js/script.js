@@ -18,3 +18,21 @@ window.addEventListener("load", function(){
     preloader.classList.add("loaded");
     document.body.classList.add("loaded");
 })
+
+// mobile navbar
+
+//show the mobile navbar when click manu button
+// and hidden after click menu close button or overlay
+
+const navbar = document.querySelector("[data-navbar]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+const overlay = document.querySelector("[data-overlay]");
+
+const toggleNav = function(){
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("nav-active");
+}
+
+
+addEventOnElements(navTogglers, "click", toggleNav);
