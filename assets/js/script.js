@@ -21,7 +21,7 @@ window.addEventListener("load", function(){
 
 // mobile navbar
 
-//show the mobile navbar when click manu button
+//show the mobile navbar when click menu button
 // and hidden after click menu close button or overlay
 
 const navbar = document.querySelector("[data-navbar]");
@@ -36,3 +36,20 @@ const toggleNav = function(){
 
 
 addEventOnElements(navTogglers, "click", toggleNav);
+
+
+//header 
+
+// active header when window scroll down to 100px
+
+const header = document.querySelector("[data-header]");
+
+const activeElementOnScroll = function(){
+    if(window.scrollY > 100){
+        header.classList.add("active");
+    }else{
+        header.classList.remove("active");
+    }
+}
+
+window.addEventListener("scroll", activeElementOnScroll);
